@@ -4,25 +4,24 @@
 class Spacedrepetition < Formula
   desc ""
   homepage ""
-  url "prathik/spacedrepetition"
+  url "https://github.com/prathik/spacedrepetition/archive/0.1-alpha.tar.gz"
   version "1.0.0"
-  sha256 ""
+  sha256 "67bef966e340464cda6fa6aa2976c7bf59d83973b512dc8e433247465388d8d4"
   depends_on "go" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     
-    ENV["GO111MODULE"] = "on"
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/prathik/spacedrepetition").install Dir["*"]
-
-    cd "src/github.com/prathik/spacedrepetition" do
+    opoo buildpath
+    cd buildpath/"src/github.com/prathik/spacedrepetition" do
+      system "go", "get", "./..."
       system "go", "build", "-o", bin/"sr"
       prefix.install_metafiles
-    end  
+    end
   end
-  
 
   test do
     # `test do` will create, run in and delete a temporary directory.
