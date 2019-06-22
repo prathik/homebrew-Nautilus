@@ -12,11 +12,7 @@ class Spacedrepetition < Formula
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-
-    ENV["GOPATH"] = buildpath
-    dir = buildpath
-    puts buildpath
-    
+    raise 'An error has occured'  
     cd dir do
       system "go", "build"
       prefix.install_metafiles
