@@ -7,17 +7,22 @@ class Spacedrepetition < Formula
   url "prathik/spacedrepetition"
   version "1.0.0"
   sha256 ""
-  # depends_on "go" => :build
+  depends_on "go" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    raise 'An error has occured'  
-    cd dir do
-      system "go", "build"
-    end
     
+    ENV["GO111MODULE"] = "on"
+    ENV["GOPATH"] = buildpath
+    (buildpath/"src/github.com/prathik/spacedrepetition").install Dir["*"]
+
+    cd "src/github.com/prathik/spacedrepetition" do
+      system "go", "build", "-o", bin/"sr"
+      prefix.install_metafiles
+    end  
   end
+  
 
   test do
     # `test do` will create, run in and delete a temporary directory.
@@ -29,7 +34,7 @@ class Spacedrepetition < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "./spacedrepetition add 'test'"
-    system "./spacedrepetition all"
+    system "sr add 'test'"
+    system "sr all"
   end
 end
