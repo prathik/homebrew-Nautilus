@@ -5,7 +5,7 @@ class Spacedrepetition < Formula
   desc ""
   homepage ""
   url "prathik/spacedrepetition"
-  version ""
+  version "1.0.0"
   sha256 ""
   # depends_on "go" => :build
 
