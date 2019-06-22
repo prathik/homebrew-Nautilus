@@ -7,7 +7,7 @@ class Spacedrepetition < Formula
   url "prathik/spacedrepetition"
   version ""
   sha256 ""
-  depends_on "go" => :build
+  # depends_on "go" => :build
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
