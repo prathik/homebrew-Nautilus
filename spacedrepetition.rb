@@ -15,7 +15,6 @@ class Spacedrepetition < Formula
     raise 'An error has occured'  
     cd dir do
       system "go", "build"
-      prefix.install_metafiles
     end
     
   end
