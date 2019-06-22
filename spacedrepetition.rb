@@ -14,13 +14,11 @@ class Spacedrepetition < Formula
     # Remove unrecognized options if warned by configure
 
     ENV["GOPATH"] = buildpath
-    dir = buildpath/"src/gopkg.in/Netflix-Skunkworks/go-jira.v1"
-    dir.install buildpath.children
-
+    dir = buildpath
     puts buildpath
     
     cd dir do
-      system "go", "build", "-o", bin/"jira", "-ldflags", "-w -s", "cmd/jira/main.go"
+      system "go", "build"
       prefix.install_metafiles
     end
     
