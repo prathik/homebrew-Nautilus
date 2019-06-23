@@ -15,7 +15,6 @@ class Spacedrepetition < Formula
     
     ENV["GOPATH"] = buildpath
     (buildpath/"src/github.com/prathik/spacedrepetition").install Dir["*"]
-    opoo buildpath
     cd buildpath/"src/github.com/prathik/spacedrepetition" do
       system "go", "get", "./..."
       system "go", "build", "-o", bin/"sr"
