@@ -6,7 +6,7 @@ class Spacedrepetition < Formula
   homepage ""
   url "https://github.com/prathik/spacedrepetition/archive/v0.0.2-alpha.tar.gz"
   version "1.0.1"
-  sha256 "fd645809be542d9380c6f4f8b72d24017473634d2ccd4539518a03ac29f9e0df"
+  sha256 "7464ef77744f9c127b9aa2eae169126e7d6fc306279f8290bb8c0a031e65abd3"
   depends_on "go" => :build
 
   def install
