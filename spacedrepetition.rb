@@ -4,9 +4,9 @@
 class Spacedrepetition < Formula
   desc ""
   homepage ""
-  url "https://github.com/prathik/spacedrepetition/archive/v0.0.2-alpha.tar.gz"
-  version "1.0.1"
-  sha256 "7464ef77744f9c127b9aa2eae169126e7d6fc306279f8290bb8c0a031e65abd3"
+  url "https://github.com/prathik/spacedrepetition/archive/1.0.0.tar.gz"
+  version "1.0.2"
+  sha256 "f872952230d5d3c8eee0896cacc5f33fc9e76475eb72dd999c128f98b7772c03"
   depends_on "go" => :build
 
   def install
