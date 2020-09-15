@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Spacedrepetition < Formula
+class Nautilus < Formula
   desc ""
   homepage ""
   url "https://github.com/prathik/Nautilus/archive/1.0.0.tar.gz"
