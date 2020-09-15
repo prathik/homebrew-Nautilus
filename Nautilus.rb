@@ -4,7 +4,7 @@
 class Spacedrepetition < Formula
   desc ""
   homepage ""
-  url "https://github.com/prathik/spacedrepetition/archive/1.0.0.tar.gz"
+  url "https://github.com/prathik/Nautilus/archive/1.0.0.tar.gz"
   version "1.0.2"
   sha256 "f872952230d5d3c8eee0896cacc5f33fc9e76475eb72dd999c128f98b7772c03"
   depends_on "go" => :build
@@ -14,8 +14,8 @@ class Spacedrepetition < Formula
     # Remove unrecognized options if warned by configure
     
     ENV["GOPATH"] = buildpath
-    (buildpath/"src/github.com/prathik/spacedrepetition").install Dir["*"]
-    cd buildpath/"src/github.com/prathik/spacedrepetition" do
+    (buildpath/"src/github.com/prathik/Nautilus").install Dir["*"]
+    cd buildpath/"src/github.com/prathik/Nautilus" do
       system "go", "get", "./..."
       system "go", "build", "-o", bin/"sr"
       prefix.install_metafiles
